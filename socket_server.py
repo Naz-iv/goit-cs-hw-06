@@ -9,7 +9,7 @@ from multiprocessing import Process
 
 
 def save_data(data):
-    client = MongoClient("mongodb://root:example@0.0.0.0:27017", server_api=ServerApi("1"))
+    client = MongoClient("mongodb://root:example@mongo:27017", server_api=ServerApi("1"))
     db = client.db
     logging.info("Saving message information to Mongo...")
     data_parse = urllib.parse.unquote_plus(data.decode())
